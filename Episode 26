@@ -1,0 +1,15 @@
+import java.util.Random;
+
+public class JavaClass {
+	public static void main(String[] args) {
+
+		Random dice = new Random();
+		int output;
+		
+		for (int counter = 1; counter <= 10; counter++) {
+			output = dice.nextInt(6) + 1;
+			System.out.println(output + " ");
+		}
+		
+	}
+}
