@@ -1,0 +1,16 @@
+import java.util.Scanner;
+
+public class Practice {
+	public static void main(String[] args) {
+			
+		Scanner scr = new Scanner(System.in);
+		double firstNum, secondNum, answer;
+		System.out.println("Enter first number: ");
+		firstNum = scr.nextDouble();
+		System.out.println("Enter second number: ");
+		secondNum = scr.nextDouble();
+		answer = firstNum + secondNum;
+		System.out.println("The sum is " + answer);
+		
+	}
+}
