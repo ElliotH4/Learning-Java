@@ -1,0 +1,15 @@
+public class Practice {
+	public static void main(String[] args) {
+		
+		int boy, girl;
+		boy = 18;
+		girl = 40;
+		
+		if (boy > 10 || girl < 60) { //&& is "and" || is "or"
+			System.out.println("You can enter.");
+		} else {
+			System.out.println("You can not enter.");
+		}
+		
+	}
+}
