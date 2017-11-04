@@ -1,8 +1,0 @@
-public class JavaClass {
-	public static void main(String[] args) {
-		
-		Scanner Elliot = new Scanner(System.in); //Elliot = whatever input
-		System.out.println(Elliot.nextLine()); //prints out their input on next line
-		   
-   }
-}
