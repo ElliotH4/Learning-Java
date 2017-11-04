@@ -1,0 +1,16 @@
+import java.util.Scanner;
+
+public class JavaClass {
+	public static void main(String[] args) {	
+  
+    Scanner Elliot = new Scanner(System.in);
+		double firstNum, secondNum, answer;
+		System.out.println("Enter first number: ");
+		firstNum = Elliot.nextDouble();
+		System.out.println("Enter second number: ");
+		secondNum = Elliot.nextDouble();
+		answer = firstNum + secondNum;
+		System.out.println("The sum is " + answer);
+    
+    }
+}
