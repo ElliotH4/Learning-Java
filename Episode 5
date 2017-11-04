@@ -1,0 +1,12 @@
+public class Practice {
+	public static void main(String[] args) {
+			
+		double Tuna; //doubles are numbers that have decimals; 1.1
+		Tuna = 5.28;		
+		System.out.print("I want "); //.print = same line
+		System.out.print(Tuna); //declaring a variable
+		System.out.println(" movies"); //.println creates a new line for following text
+		System.out.print("apples"); 
+		
+	}
+}
