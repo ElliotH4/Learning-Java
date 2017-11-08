@@ -1,0 +1,439 @@
+import java.util.Random;
+import java.util.Scanner;
+
+public class Practice {
+	public static void main(String[] args) {
+		
+		int questionSelector;
+		int flatOrSharps;
+		int randomAmount;
+		int totalCorrect = 0;
+		double answer;
+		double correctAnswer = 0;
+		String signature = null;
+		
+		System.out.println("Welcome to the Orchestra 1A Final Review.");
+		System.out.println("This is a practice test on key signatures and modes.");
+		System.out.println("Start!");
+		
+		for (int counter = 1; counter <= 10; counter++) {
+		Random dice = new Random();
+		Scanner input = new Scanner(System.in);
+		questionSelector = dice.nextInt(5); 
+		
+		switch (questionSelector) {
+		
+		case 0:
+			//[0] = How many beats is x?
+			randomAmount = dice.nextInt(6) + 1;
+			
+			switch (randomAmount) {
+			case 1:
+				signature = "eigth note";
+				correctAnswer = 0.125;
+				break;
+			case 2:
+				signature = "quarter note";
+				correctAnswer = 1;
+				break;
+			case 3:
+				signature = "half note";
+				correctAnswer = 2;
+				break;
+			case 4:
+				signature = "whole note";
+				correctAnswer = 4;
+				break;
+			case 5:
+				signature = "dotted quarter note";
+				correctAnswer = 1.5;
+				break;
+			case 6:
+				signature = "dotted half note";
+				correctAnswer = 3;
+				break;
+			default:
+				System.out.println("Error!");
+				break;
+			}
+			
+			System.out.println("How many beats does a " + signature + " have?");
+			answer = input.nextDouble();
+			
+			if (answer == correctAnswer) {
+				System.out.println("Correct!");
+				totalCorrect++;
+			} else {
+				System.out.println("Incorrect! The answer is " + correctAnswer);
+			}
+			
+			break;
+		case 1:
+			//[1] = How many flats/sharps does x key signature have?
+			flatOrSharps = dice.nextInt(2);
+			
+			if (flatOrSharps == 0) {
+				randomAmount = dice.nextInt(7) + 1; //c, g, d, a, e, b, f#, c#, ab, eb, bb, fb
+				
+				switch (randomAmount) {
+				case 1:
+					signature = "C flat"; //en B
+					correctAnswer = 7;
+					break;
+				case 2:
+					signature = "G flat"; //en F sharp
+					correctAnswer = 6;
+					break;
+				case 3:
+					signature = "D flat"; //en C sharp
+					correctAnswer = 5;
+					break;
+				case 4:
+					signature = "A flat";
+					correctAnswer = 4;
+					break;
+				case 5:
+					signature = "E flat";
+					correctAnswer = 3;
+					break;
+				case 6:
+					signature = "B flat";
+					correctAnswer = 2;
+					break;
+				case 7:
+					signature = "F flat";
+					correctAnswer = 1;
+					break;
+				case 8:
+					signature = "C";
+					correctAnswer = 0;
+					break;
+				default:
+					System.out.println("Error!");
+					break;
+				}
+				
+				System.out.println("How many flats does the " + signature + " key signature have?");
+				answer = input.nextInt();
+				
+				if (answer == correctAnswer ) {
+					System.out.println("Correct!");
+					totalCorrect++;
+				} else {
+					System.out.println("Incorrect! The answer is " + correctAnswer + ".");
+				}
+				
+			} else {			
+				randomAmount = dice.nextInt(8) + 1;
+				
+				switch (randomAmount) {
+				case 1:
+					signature = "C";
+					correctAnswer = 0;
+					break;
+				case 2:
+					signature = "G";
+					correctAnswer = 1;
+					break;
+				case 3:
+					signature = "D";
+					correctAnswer = 2;
+					break;
+				case 4:
+					signature = "A";
+					correctAnswer = 3;
+					break;
+				case 5:
+					signature = "E";
+					correctAnswer = 4;
+					break;
+				case 6:
+					signature = "B"; //en C flat
+					correctAnswer = 5;
+					break;
+				case 7:
+					signature = "F sharp"; //en G flat
+					correctAnswer = 6;
+					break;
+				case 8:
+					signature = "C sharp"; //en D flat
+					correctAnswer = 7;
+					break;
+				default:
+					System.out.println("Error!");
+					break;
+				}
+					
+				System.out.println("How many sharps does the " + signature + " key signature have?");
+				answer = input.nextInt();
+				
+				if (answer == correctAnswer ) {
+					System.out.println("Correct!");
+					totalCorrect++;
+				} else {
+					System.out.println("Incorrect! The answer is " + correctAnswer + ".");
+				}	
+			
+			}
+			break;
+		case 2:
+			//[1] = How many flats/sharps does x key signature have?
+			flatOrSharps = dice.nextInt(2);
+			
+			if (flatOrSharps == 0) {
+				randomAmount = dice.nextInt(7) + 1; //c, g, d, a, e, b, f#, c#, ab, eb, bb, fb
+				
+				switch (randomAmount) {
+				case 1:
+					signature = "C flat"; //en B
+					correctAnswer = 7;
+					break;
+				case 2:
+					signature = "G flat"; //en F sharp
+					correctAnswer = 6;
+					break;
+				case 3:
+					signature = "D flat"; //en C sharp
+					correctAnswer = 5;
+					break;
+				case 4:
+					signature = "A flat";
+					correctAnswer = 4;
+					break;
+				case 5:
+					signature = "E flat";
+					correctAnswer = 3;
+					break;
+				case 6:
+					signature = "B flat";
+					correctAnswer = 2;
+					break;
+				case 7:
+					signature = "F flat";
+					correctAnswer = 1;
+					break;
+				case 8:
+					signature = "C";
+					correctAnswer = 0;
+					break;
+				default:
+					System.out.println("Error!");
+					break;
+				}
+				
+				System.out.println("How many flats does the " + signature + " key signature have?");
+				answer = input.nextInt();
+				
+				if (answer == correctAnswer ) {
+					System.out.println("Correct!");
+					totalCorrect++;
+				} else {
+					System.out.println("Incorrect! The answer is " + correctAnswer + ".");
+				}
+				
+			} else {			
+				randomAmount = dice.nextInt(8) + 1;
+				
+				switch (randomAmount) {
+				case 1:
+					signature = "C";
+					correctAnswer = 0;
+					break;
+				case 2:
+					signature = "G";
+					correctAnswer = 1;
+					break;
+				case 3:
+					signature = "D";
+					correctAnswer = 2;
+					break;
+				case 4:
+					signature = "A";
+					correctAnswer = 3;
+					break;
+				case 5:
+					signature = "E";
+					correctAnswer = 4;
+					break;
+				case 6:
+					signature = "B"; //en C flat
+					correctAnswer = 5;
+					break;
+				case 7:
+					signature = "F sharp"; //en G flat
+					correctAnswer = 6;
+					break;
+				case 8:
+					signature = "C sharp"; //en D flat
+					correctAnswer = 7;
+					break;
+				default:
+					System.out.println("Error!");
+					break;
+				}
+					
+				System.out.println("How many sharps does the " + signature + " key signature have?");
+				answer = input.nextInt();
+				
+				if (answer == correctAnswer ) {
+					System.out.println("Correct!");
+					totalCorrect++;
+				} else {
+					System.out.println("Incorrect! The answer is " + correctAnswer + ".");
+				}	
+			
+			}
+			break;
+		case 3:
+			//[2] = Which mode is the ____?		
+			randomAmount = dice.nextInt(7) + 1;
+			
+			switch (randomAmount) {
+				case 1:
+					signature = "Ionian";
+					correctAnswer = 1;
+					break;
+				case 2:
+					signature = "Dorian";
+					correctAnswer = 2;
+					break;
+				case 3:
+					signature = "Phrygian";
+					correctAnswer = 3;
+					break;
+				case 4:
+					signature = "Lydian";
+					correctAnswer = 4;
+					break;
+				case 5:
+					signature = "Mixolydian";
+					correctAnswer = 5;
+					break;
+				case 6:
+					signature = "Aeolian";
+					correctAnswer = 6;
+					break;
+				case 7:
+					signature = "Locrian";
+					correctAnswer = 7;
+					break;
+				default:
+					System.out.println("Error!");
+				break;
+			}
+			
+			System.out.println("Which mode is " + signature + "?");
+			answer = input.nextInt();
+			
+			if (answer == correctAnswer) {
+				System.out.println("Correct!"); 
+				totalCorrect++;
+			} else {
+				System.out.println("Incorrect! The answer is " + correctAnswer + ".");
+			}
+			
+			break;
+		case 4:
+			//[2] = Which mode is the ____?		
+			randomAmount = dice.nextInt(7) + 1;
+			
+			switch (randomAmount) {
+				case 1:
+					signature = "Ionian";
+					correctAnswer = 1;
+					break;
+				case 2:
+					signature = "Dorian";
+					correctAnswer = 2;
+					break;
+				case 3:
+					signature = "Phrygian";
+					correctAnswer = 3;
+					break;
+				case 4:
+					signature = "Lydian";
+					correctAnswer = 4;
+					break;
+				case 5:
+					signature = "Mixolydian";
+					correctAnswer = 5;
+					break;
+				case 6:
+					signature = "Aeolian";
+					correctAnswer = 6;
+					break;
+				case 7:
+					signature = "Locrian";
+					correctAnswer = 7;
+					break;
+				default:
+					System.out.println("Error!");
+				break;
+			}
+			
+			System.out.println("Which mode is " + signature + "?");
+			answer = input.nextInt();
+			
+			if (answer == correctAnswer) {
+				System.out.println("Correct!"); 
+				totalCorrect++;
+			} else {
+				System.out.println("Incorrect! The answer is " + correctAnswer + ".");
+			}
+			
+			break;
+		default:
+			System.out.println("Error!");
+			break;
+		
+			}
+		}
+		
+		int totalIncorrect = 10 - totalCorrect;
+		double grade = totalCorrect * 10;
+		char letterGrade = 0;
+		
+		switch (totalCorrect) {
+			case 1:
+				letterGrade = 'F';
+				break;
+			case 2:
+				letterGrade = 'F';
+				break;
+			case 3:
+				letterGrade = 'F';
+				break;
+			case 4:
+				letterGrade = 'F';
+				break;
+			case 5:
+				letterGrade = 'F';
+				break;
+			case 6:
+				letterGrade = 'D';
+				break;
+			case 7:
+				letterGrade = 'C';
+				break;
+			case 8:
+				letterGrade = 'B';
+				break;
+			case 9:
+				letterGrade = 'A';
+				break;
+			case 10:
+				letterGrade = 'A';
+				break;
+			default:
+				System.out.println("Error!");
+				break;
+			
+		}
+		System.out.println("You finished 10 questions for the Orchestra 1A Final Review!");
+		System.out.println("Here are your results: ");
+		System.out.println("Out of 10 questions, you got " + totalCorrect + " correct and " + totalIncorrect + " incorrect.");
+		System.out.println("This means you got a " + grade + "%, or a(n) " + letterGrade + ".");
+		System.out.println("Study more and better luck next time!");
+		
+	}
+}
