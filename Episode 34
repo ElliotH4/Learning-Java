@@ -2,20 +2,20 @@
 public class JavaClass {
 	public static void main(String[] args) {
 		
-		int firstarray[][] = {{8,9,10,11}, {12,13,14,15}}; //rows = 8,9,10,11, column = 12,13,14,15
-		int secondarray[][] = {{30,31,32,33}, {43}, {4,5,6}};
+		int firstarray[][] = {{8,9,10,11}, {12,13,14,15}}; //[0][1] means the 0th set (so the 8,9,10,11 one) and the 1st element, so 9
+		int secondarray[][] = {{30,31,32,33}, {43}, {4,5,6}}; //[2][2] would be the 2nd set starting from 0, and the 2nd element, starting for 0, so 6
 		
 		System.out.println("This is the first array");
-		display(firstarray);
+		display(firstarray); //You replace x with the firstarray's attributes*
 		
 		System.out.println("This is the second array");
-		display(secondarray);
+		display(secondarray); //You replace x with the secondarray's attributes**
 	}
 	
-	public static void display(int x[][]) {
-		for (int row = 0; row < x.length; row++) {
-			for (int column = 0; column < x[row].length; column++) {
-				System.out.print(x[row][column] + "\t");
+	public static void display(int x[][]) { //int x is a placeholder for eventually the arrays
+		for (int row = 0; row < x.length; row++) { //*x.length will be firstarray.length at first
+			for (int column = 0; column < x[row].length; column++) { //x[row].length means it takes the array, and what set its on, and finds the length
+				System.out.print(x[row][column] + "\t"); //^ so that means u can find the differing row lengths in second array
 			}
 			System.out.println();
 		}
