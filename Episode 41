@@ -1,0 +1,74 @@
+
+public class Java {
+	public static void main(String args[]) {
+		
+		Script NoTime = new Script();
+		Script OnlyHour = new Script(5);
+		Script NoSecond = new Script(5, 13);
+		Script AllTime = new Script(5, 13, 43);
+		
+		
+		System.out.printf("%s\n", NoTime.toMilitary());
+		System.out.printf("%s\n", OnlyHour.toMilitary());
+		System.out.printf("%s\n", NoSecond.toMilitary());
+		System.out.printf("%s\n", AllTime.toMilitary());
+	}
+}
+
+
+public class Script {
+	private int hour;
+	private int minute;
+	private int second;
+	
+	public Script() {
+		this(0, 0, 0);
+	}
+	
+	public Script(int h) {
+		this(h, 0, 0);
+	}
+	
+	public Script(int h, int m) {
+		this(h, m, 0);
+	}
+	
+	public Script(int h, int m, int s) {
+		setTime(h, m, s);
+	}
+	
+	public void setTime(int h, int m, int s) {
+		setHour(h);
+		setMinute(m);
+		setSecond(s);
+	}
+	
+	public void setHour(int h) {
+		hour = ((h >= 0 &&  h < 24) ? h : 0);
+	}
+	
+	public void setMinute(int m) {
+		minute = ((m >= 0 && m < 60) ? m : 0);
+	}
+	
+	public void setSecond(int s) {
+		second = ((s >= 0 && s < 60) ? s : 0);
+	}
+	
+	public int getHour() {
+		return hour;
+	}
+	
+	public int getMinute() {
+		return minute;
+	}
+	
+	public int getSecond() {
+		return second;
+	}
+	
+	public String toMilitary() {
+		return String.format("%02d:%02d:%02d", getHour(), getMinute(), getSecond());
+	}
+}
+
