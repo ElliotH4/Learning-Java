@@ -1,0 +1,45 @@
+
+public class Java {
+	public static void main(String args[]) {
+		
+		Code DateObject = new Code(1, 1, 18);
+		Script FillObject = new Script("Elliot", DateObject);
+		
+		System.out.println(FillObject);
+	}
+}
+
+
+public class Script {
+	private String name;
+	private Code birthday;
+	
+	public Script(String theName, Code theDate) {
+		name = theName;
+		birthday = theDate;
+		
+	}
+	
+	public String toString() {
+		return String.format("My name is %s, and my birthday is %s", name, birthday);
+	}
+}
+
+
+public class Code {
+	private int month;
+	private int day;
+	private int year;
+	
+	public Code(int m, int d, int y) {
+		month = m;
+		day = d;
+		year = y;
+		
+		System.out.printf("The constructor for this is %s\n", this);
+	}
+	
+	public String toString() {
+		return String.format("%d/%d/%d", month, day, year);
+	}
+}
