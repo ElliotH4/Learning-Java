@@ -1,0 +1,30 @@
+
+public class Java {
+	public static void main(String args[]) {
+		for(Script people: Script.values()) 
+			System.out.printf("%s\t%s\t%s\n", people, people.getDesc(), people.getYear());
+	}
+}
+
+
+public enum Script {
+	Elliot("rekt", "15"),
+	Monika("fake", "18"),
+	Taylor("real", "16");
+	
+	private final String DESC;
+	private final String YEAR;
+	
+	Script(String desc, String year) {
+		DESC = desc;
+		YEAR = year;
+	}
+	
+	public String getDesc() {
+		return DESC;
+	}
+	
+	public String getYear() {
+		return YEAR;
+	}
+}
